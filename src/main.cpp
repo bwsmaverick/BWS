@@ -40,7 +40,7 @@ CTxMemPool mempool;
 map<uint256, CBlockIndex*> mapBlockIndex;
 set<pair<COutPoint, unsigned int> > setStakeSeen;
 
-CBigNum bnProofOfStakeLimit(~uint256(0) >> 48);
+CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
 int nStakeMinConfirmations = 10;
 unsigned int nStakeMinAge = 6 * 60 * 60; // 6 hours
