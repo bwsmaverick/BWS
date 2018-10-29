@@ -954,7 +954,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.bws
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Bws";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "BWSPOS";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -966,10 +966,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "Bws";
+    return pathRet / "BWSPOS";
 #else
     // Unix
-    return pathRet / ".bws";
+    return pathRet / ".bwspos";
 #endif
 #endif
 }
